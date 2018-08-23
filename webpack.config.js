@@ -7,6 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const sourceFolder = 'src',
     buildFolder = 'myung-theme',
     PATHS = {
+        contentBase: __dirname + buildFolder,
         build: path.resolve(__dirname, buildFolder),
         src: path.resolve(__dirname, sourceFolder),
         node: path.resolve(__dirname, 'node_modules'),
@@ -15,7 +16,7 @@ const sourceFolder = 'src',
 
 // Development Server Options
 const devServerOptions = {
-    contentBase: PATHS.build
+    contentBase: PATHS.contentBase
 };
 
 // Plugins
@@ -24,10 +25,10 @@ const CopyImage = [
 ];
 
 const CopyFont = [
-    { from: `${PATHS.src}/webfonts/`, to: `${PATHS.build}/asset/webfonts/` }
+    { from: `${PATHS.src}/webfonts/`, to: `${PATHS.build}/assets/webfonts/` }
 ];
 
-const extractCSS = new ExtractTextPlugin('assets/css/app.bundle.css');
+// const extractCSS = new ExtractTextPlugin('assets/css/app.bundle.css');
 
 const fileOptions = {
     'css': ['app.bundle.css'],
@@ -46,18 +47,23 @@ const fileOptions = {
 
 const IndexHtml = {
     filename: 'index.html',
-    title: 'Myung Website',
     template: `${PATHS.src}/index.html`,
-    // inject: 'head',
+    'files': fileOptions
+};
+
+const IntroHtml = {
+    filename: 'intro.html',
+    template: `${PATHS.src}/intro.html`,
     'files': fileOptions
 };
 
 const pluginList = [
-    // new ExtractTextPlugin('assets/css/app.bundle.css'),
-    extractCSS,
+    new ExtractTextPlugin('assets/css/app.bundle.css'),
+    // extractCSS,
     new CopyWebpackPlugin(CopyImage),
-    new CopyWebpackPlugin(CopyFont),
-    new HtmlWebpackPlugin(IndexHtml)
+    // new CopyWebpackPlugin(CopyFont),
+    new HtmlWebpackPlugin(IndexHtml),
+    new HtmlWebpackPlugin(IntroHtml)
 ];
 
 // Modules
@@ -77,11 +83,10 @@ const styles = {
 
 const sass = {
     test: /\.scss$/,
-    use: [
-        'style-loader',
-        'css-loader',
-        'sass-loader'
-    ]
+    use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: ['css-loader', 'sass-loader']
+    })
 };
 
 const images = {
