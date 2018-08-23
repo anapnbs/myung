@@ -1,6 +1,13 @@
+h1 {
+  color: blue; }
+
+/* End of SCSS */
 body {
     background-color: #ddd;
-}@charset "UTF-8";
+}
+
+/* End of CSS */
+@charset "UTF-8";
 
 /*!
  * animate.css -http://daneden.me/animate

@@ -205,7 +205,7 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sr
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! bootstrap/scss/bootstrap.scss */ \"./node_modules/bootstrap/scss/bootstrap.scss\");\n\n__webpack_require__(/*! ../css/app.css */ \"./src/css/app.css\");\n\n__webpack_require__(/*! animate.css */ \"./node_modules/animate.css/animate.css\");\n\n__webpack_require__(/*! lightbox2/dist/css/lightbox.min.css */ \"./node_modules/lightbox2/dist/css/lightbox.min.css\");\n\n__webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n__webpack_require__(/*! popper.js */ \"./node_modules/popper.js/dist/esm/popper.js\");\n\n__webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n\n__webpack_require__(/*! lightbox2/dist/js/lightbox-plus-jquery.js */ \"./node_modules/lightbox2/dist/js/lightbox-plus-jquery.js\");\n\nvar _wowAnimate = __webpack_require__(/*! ./modules/wowAnimate.js */ \"./src/js/modules/wowAnimate.js\");\n\nvar _shadow = __webpack_require__(/*! ./modules/shadow.js */ \"./src/js/modules/shadow.js\");\n\nvar _scroll = __webpack_require__(/*! ./modules/scroll.js */ \"./src/js/modules/scroll.js\");\n\nvar _scroll2 = _interopRequireDefault(_scroll);\n\nvar _bsComponents = __webpack_require__(/*! ./modules/bsComponents.js */ \"./src/js/modules/bsComponents.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("\n\n__webpack_require__(/*! bootstrap/scss/bootstrap.scss */ \"./node_modules/bootstrap/scss/bootstrap.scss\");\n\n__webpack_require__(/*! ../css/app.css */ \"./src/css/app.css\");\n\n__webpack_require__(/*! ../scss/style.scss */ \"./src/scss/style.scss\");\n\n__webpack_require__(/*! animate.css */ \"./node_modules/animate.css/animate.css\");\n\n__webpack_require__(/*! lightbox2/dist/css/lightbox.min.css */ \"./node_modules/lightbox2/dist/css/lightbox.min.css\");\n\n__webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n\n__webpack_require__(/*! popper.js */ \"./node_modules/popper.js/dist/esm/popper.js\");\n\n__webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n\n__webpack_require__(/*! lightbox2/dist/js/lightbox-plus-jquery.js */ \"./node_modules/lightbox2/dist/js/lightbox-plus-jquery.js\");\n\nvar _wowAnimate = __webpack_require__(/*! ./modules/wowAnimate.js */ \"./src/js/modules/wowAnimate.js\");\n\nvar _shadow = __webpack_require__(/*! ./modules/shadow.js */ \"./src/js/modules/shadow.js\");\n\nvar _scroll = __webpack_require__(/*! ./modules/scroll.js */ \"./src/js/modules/scroll.js\");\n\nvar _scroll2 = _interopRequireDefault(_scroll);\n\nvar _bsComponents = __webpack_require__(/*! ./modules/bsComponents.js */ \"./src/js/modules/bsComponents.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ }),
 
@@ -254,6 +254,17 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 
 "use strict";
 eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.wow = undefined;\n\nvar _wow = __webpack_require__(/*! wow.js */ \"./node_modules/wow.js/dist/wow.js\");\n\nvar _wow2 = _interopRequireDefault(_wow);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar wow = new _wow2.default({\n    boxClass: 'wow',\n    animateClass: 'animated',\n    offset: 0,\n    mobile: true,\n    live: true,\n    callback: function callback(box) {\n        // the callback is fired every time an animation is started\n        // the argument that is passed in is the DOM node being animated\n    },\n    scrollContainer: null\n});\nwow.init();\n\nexports.wow = wow;\n\n//# sourceURL=webpack:///./src/js/modules/wowAnimate.js?");
+
+/***/ }),
+
+/***/ "./src/scss/style.scss":
+/*!*****************************!*\
+  !*** ./src/scss/style.scss ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/scss/style.scss?");
 
 /***/ })
 
