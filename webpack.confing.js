@@ -10,7 +10,7 @@ const sourceFolder = 'src',
         build: path.resolve(__dirname, buildFolder),
         src: path.resolve(__dirname, sourceFolder),
         node: path.resolve(__dirname, 'node_modules'),
-        appJS: path.resolve(__dirname, `${sourceFolder}/js/app.js`)
+        appJS: path.resolve(__dirname, `${sourceFolder}'/js/app.js`)
     };
 
 // Development Server Options
@@ -20,11 +20,11 @@ const devServerOptions = {
 
 // Plugins
 const CopyImage = [
-    { from: `${PATHS.src}/images/`, to: `${PATHS.build}/assets/images/` }
+    { from: `${PATHS.src} / images / `, to: `${PATHS.build} / assets / images / ` }
 ];
 
 const CopyFont = [
-    { from: `${PATHS.src}/webfonts/`, to: `${PATHS.build}/assets/webfonts/` }
+    { from: `${PATHS.src} / webfonts / `, to: `${PATHS.build} / assets / webfonts / ` }
 ];
 
 // const extractCSS = new ExtractTextPlugin('assets/css/app.bundle.css');
@@ -47,7 +47,7 @@ const fileOptions = {
 const IndexHtml = {
     filename: 'index.html',
     title: 'Myung Website',
-    template: `${PATHS.src}/index.html`,
+    template: `${PATHS.src} / index.html`,
     // inject: 'head',
     'files': fileOptions
 };
@@ -116,6 +116,9 @@ module.exports = {
         filename: 'assets/js/app.bundle.js'
     },
     mode: 'development',
+    resolve: {
+        modules: [PATHS.src, 'node_modules'],
+    },
     devServer: devServerOptions,
     module: {
         rules: [js, styles, sass, images]
