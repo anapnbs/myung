@@ -1,0 +1,44 @@
+/* Quick Menu */
+#quick-menu {
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    width: 80px;
+    height: 80px;
+    z-index: 100;
+
+    ul {
+        background-color: rgba($grey-darken-3, .4);
+    }
+}
+
+/* Primary Navigation Styles */
+nav#primary-nav {
+    // background-color: #6d6d6d;
+
+    .dropdown-wide {
+        position: static;
+
+        .dropdown-menu.w-100 {
+            margin-top: -0.4rem;
+        }
+    }
+
+    a {
+        font-size: 1.2rem;
+    }
+
+    .dropdown-menu.show a {
+        font-size: .95rem;
+    }
+
+}
+
+/* Footer Navigation Styles */
+footer#footer {
+    background-color: rgb(39, 45, 56);
+
+    a, a:hover {
+        color: #fff;
+    }
+}

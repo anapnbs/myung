@@ -9,6 +9,6 @@ import 'bootstrap';
 import 'lightbox2/dist/js/lightbox-plus-jquery.js';
 
 import { wow } from './modules/wowAnimate.js';
-import { shadow } from './modules/shadow.js';
+import { shadowRaise, shadowDown } from './modules/shadow.js';
 import scroll from './modules/scroll.js';
 import { tooltip, popover } from './modules/bsComponents.js';
