@@ -25,7 +25,7 @@ const CopyImage = [
 ];
 
 const CopyFont = [
-    { from: `${PATHS.src}/webfonts/`, to: `${PATHS.build}/assets/webfonts/` }
+    { from: PATHS.src + '/webfonts/', to: PATHS.build + '/assets/webfonts/' }
 ];
 
 // const extractCSS = new ExtractTextPlugin('assets/css/app.bundle.css');
@@ -57,12 +57,19 @@ const IntroHtml = {
     'files': fileOptions
 };
 
+const Index2Html = {
+    filename: 'index2.html',
+    template: `${PATHS.src}/index2.html`,
+    'files': fileOptions
+};
+
 const pluginList = [
     new ExtractTextPlugin('assets/css/app.bundle.css'),
     // extractCSS,
     new CopyWebpackPlugin(CopyImage),
     // new CopyWebpackPlugin(CopyFont),
     new HtmlWebpackPlugin(IndexHtml),
+    new HtmlWebpackPlugin(Index2Html),
     new HtmlWebpackPlugin(IntroHtml)
 ];
 

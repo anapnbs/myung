@@ -12,3 +12,4 @@ import { wow } from './modules/wowAnimate.js';
 import { shadowRaise, shadowDown } from './modules/shadow.js';
 import scroll from './modules/scroll.js';
 import { tooltip, popover } from './modules/bsComponents.js';
+import { toggleMenu } from './modules/toggleMenu.js';
