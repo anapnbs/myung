@@ -57,6 +57,105 @@
     </div>
     <!-- /SECTION : Quick Menu -->
 
+    <!-- SECTION : Online Modal
+    ============================================ -->
+    <div class="modal fade" id="onlineModal" tabindex="-1" role="dialog" aria-labelledby="onlineModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="onlineModalLabel">Ask us whenever...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <p class="h4 text-center mb-4">Wite to us</p>
+
+                        <div class="form-row">
+                            <div class="col-lg-6">
+                                <div class="md-form">
+                                    <input type="text" id="materialFormContactNameEx" class="form-control" placeholder="Your name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="md-form">
+                                    <input type="email" id="materialFormContactEmailEx" class="form-control" placeholder="Your email">
+                                    <!-- <label for="materialFormContactEmailEx">Your email</label> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="md-form">
+                                    <input type="text" id="materialFormContactSubjectEx" class="form-control" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="md-form">
+                                    <textarea type="text" id="materialFormContactMessageEx" class="form-control md-textarea" rows="3" placeholder="Your message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button class="btn btn-outline-secondary" type="submit">Send
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Additional Contact -->
+                    <div class="text-center my-4">
+                        <h4>OR</h4>
+                        <p>If you feel comfortable calling a phone, please telephone 055-111-1111~ </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /SECTION : Online Modal -->
+
+    <!-- SECTION : Search Modal
+    ============================================ -->
+    <div class="modal fade" id="modal-search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- modal-dialog modal-xl -->
+        <div class="modal-dialog modal-xl my-0" role="document">
+            <!-- modal-content -->
+            <div class="modal-content">
+                <div class="container">
+                    <!-- modal-header -->
+                    <div class="modal-header border-0 d-flex align-items-center md-form">
+                        <input type="text" class="form-control search-term my-0" id="search-term" placeholder="Search for disease & treatment..."
+                            autofocus="true">
+                        <button type="button" class="js-search-close btn btn-info mr-2">
+                            <i class="fas fa-microphone fa-2x"></i>
+                        </button>
+                        <button type="button" class="js-search-close btn btn-danger" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-times fa-2x"></i>
+                        </button>
+                    </div>
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <!-- search-results -->
+                        <div id="search-results">
+                            <div class="row">
+                                <div class="col-md-4" id="search-post"></div>
+                                <div class="col-md-4" id="search-page"></div>
+                                <div class="col-md-4" id="search-post_type">
+                                    <div class="mb-4" id="search-event"></div>
+                                    <div id="search-review"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /SECTION : Search -->
+
     <!-- SECTION : ALERT
     ============================================ -->
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -72,7 +171,7 @@
     <nav id="top-nav" class="navbar navbar-expand-lg navbar-light navbar-transparent">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="./assets/images/logo.png" width="300" height="100" class="d-inline-block align-top" alt="">
+                <img src="./assets/images/logo.png" width="256" height="50" class="d-inline-block align-top" alt="">
             </a>
 
             <div class="collapse navbar-collapse" id="navbarTopContent">
@@ -83,7 +182,10 @@
                         </a>
                     </li>
                     <li class="nav-item mr-2">
-                        <a class="nav-link" href="#">Online</a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Online</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-search">Search</a>
                     </li>
                 </ul>
             </div>
@@ -109,7 +211,7 @@
                     </li>
                     <li class="nav-item mr-xl-5 mr-4 dropdown dropdown-wide d-none d-lg-block">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu2</a>
-                        <div class="dropdown-menu w-100 brown lighten-5" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu w-100 brown lighten-5 shadow" aria-labelledby="navbarDropdown">
                             <div class="container-fluid py-4" style="padding-left: 6rem; padding-right: 6rem;">
                                 <div class="row">
                                     <div class="col-3">
@@ -211,7 +313,10 @@
                         <a class="nav-link" href="#">Menu8</a>
                     </li>
                     <li class="nav-item mr-xl-5 mr-4 d-block d-lg-none">
-                        <a class="nav-link" href="#">Online</a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Online</a>
+                    </li>
+                    <li class="nav-item mr-xl-5 mr-4 d-block d-lg-none">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-search">Search</a>
                     </li>
                 </ul>
             </div>
@@ -274,7 +379,7 @@
     ============================================ -->
     <section id="clinic-box">
         <div class="section-content">
-            <div class="container box-items">
+            <div class="container box-items my-5">
                 <div id="shadow-box" class="card box-item-1 bg-dark text-white border-0" style="background-image: url(assets/images/bg_universe.jpg);">
                     <div class="card-img-overlay rgba-blue-grey-light">
                         <h4 class="card-title text-warning font-weight-bold">Card title</h4>
@@ -331,32 +436,158 @@
     </section>
     <!-- /SECTION : Clinic Box -->
 
-    <!-- SECTION : Footer
+    <!-- SECTION : Notice & QnA
     ============================================ -->
-    <footer id="footer" class="text-white">
+    <section id="notice-box">
         <div class="section-content">
             <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 my-5">
+                        <div class="card card-body mb-md-3">
+                            <h2 class="text-warning text-center my-4">Notice</h2>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <h3>
+                                        <a href="#" class="text-muted">Notice1. Lorem, ipsum.</a>
+                                    </h3>
+                                </div>
+                                <dic class="col-3">
+                                    <img src="http://via.placeholder.com/600x600" alt="" class="img-fluid shadow">
+                                </dic>
+                                <div class="col-9">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia consectetur reiciendis
+                                        necessitatibus aliquid, maiores tempora quibusdam odio soluta. Similique, dolore?</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <h3>
+                                        <a href="#" class="text-muted">Notice2. Lorem, ipsum.</a>
+                                    </h3>
+                                </div>
+                                <dic class="col-3">
+                                    <img src="http://via.placeholder.com/600x600" alt="" class="img-fluid shadow">
+                                </dic>
+                                <div class="col-9">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia consectetur reiciendis
+                                        necessitatibus aliquid, maiores tempora quibusdam odio soluta. Similique, dolore?</p>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="mx-auto">
+                                <a class="btn btn-danger" href="#" role="button">See More Latest Notices</a>
+                            </div>
+                        </div>
+                        <!-- /card card-body -->
+                    </div>
+                    <!-- /col-lg-6 -->
+                    <div class="col-lg-6 my-5">
+                        <div class="card card-body">
+                            <h2 class="text-warning text-center my-4">Q & A</h2>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="mb-3">
+                                        <a href="#" class="text-muted">QnA1. Lorem, ipsum.</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia consectetur reiciendis
+                                        necessitatibus aliquid, maiores tempora quibusdam odio soluta. Similique, dolore?</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="mb-3">
+                                        <a href="#" class="text-muted">QnA2. Lorem, ipsum.</a>
+                                    </h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia consectetur reiciendis
+                                        necessitatibus aliquid, maiores tempora quibusdam odio soluta. Similique, dolore?</p>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class=" mx-auto ">
+                                <a class="btn btn-danger " href="# " role="button ">See More QnA</a>
+                            </div>
+                        </div>
+                        <!-- /card card-body -->
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /section-content -->
+    </section>
+    <!-- /SECTION : Notice & QnA  -->
+
+    <!-- SECTION : Clinic Infos
+    ============================================ -->
+    <section id="clinic-infos">
+        <div class="section-content">
+            <div class="container">
+                <div class="row my-5">
+                    <div class="col-12 mb-4">
+                        <h2 class="display-4 float-right">Infos about US</h2>
+                    </div>
+                    <!-- /col-12 -->
+                    <br>
+                    <div class="col-lg-6 mb-md-3">
+                        <img src="https://via.placeholder.com/1200x600?text=Landscape+Image" alt="" class="img-fluid my-3 shadow">
+                        <hr style="background-color: white;">
+                        <h4 class="text-warning">Business Hours</h4>
+                        <ul>
+                            <li>Mon - Fri : 10:00 - 18:00</li>
+                            <li>Sat : 10:00 - 14:00</li>
+                            <li>Holidays : Closed</li>
+                        </ul>
+                    </div>
+                    <!-- /col-lg-6 mb-md-3 -->
+                    <div class="col-lg-6 mb-md-3">
+                        <iframe class="my-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.72580230479!2d128.08635259188677!3d35.19378257773823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356efc4174379d3b%3A0xb2b377aa9a2d99d4!2z66qF7ZWc7J2Y7JuQ!5e0!3m2!1sko!2skr!4v1535253762726"
+                            width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <hr style="background-color: white;">
+                        <h4 class="text-warning">Address</h4>
+                        <p>KyungNam Jinju-city Lorem ipsum dolor sit amet, 111-11</p>
+                        <a href="#" class="btn btn-outline-warning" role="button">See More Precisely</a>
+                    </div>
+                    <!-- /col-lg-6 mb-md-3 -->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /section-content -->
+    </section>
+    <!-- /SECTION : Clinic Infos -->
+
+    <!-- SECTION : Footer
+    ============================================ -->
+    <footer id="footer">
+        <div class="section-content ">
+            <div class="container ">
                 <!-- Footer Navs -->
-                <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Menu1</a>
+                <ul class="nav justify-content-center ">
+                    <li class="nav-item ">
+                        <a class="nav-link active " href="# ">Menu1</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Menu2</a>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="# ">Menu2</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Menu3</a>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="# ">Menu3</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Menu4</a>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="# ">Menu4</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Menu5</a>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="# ">Menu5</a>
                     </li>
                 </ul>
-                <hr class="bg-white">
+                <hr class="bg-white ">
                 <br>
-                <div class="row">
+                <div class="row ">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis necessitatibus sint, excepturi quo cumque repudiandae,
                     eum, accusantium deleniti aut illum. Perspiciatis soluta enim excepturi repellat reiciendis quis cupiditate
                     quia.

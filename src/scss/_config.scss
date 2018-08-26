@@ -1,3 +1,16 @@
+$primaryBgColor     : #3F729B;
+$secondaryBgColor   : #0099CC;
+$darkBgColor        : #272d38;
+
+// Set Text Color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return $black;
+    } @else {
+        @return $white;
+    }
+}
+
 @mixin easeOut() {
     transition: all .5s ease-out;
 }
@@ -13,4 +26,8 @@
 
 .shadow-xl {
     box-shadow: 0 1rem 2.5rem -0.8rem rgba(0, 0, 0, 0.56), 0 0.25rem 1.5rem rgba(0, 0, 0, 0.12), 0 0.5rem 0.75rem -0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.modal-xl {
+    max-width: 99%;
 }

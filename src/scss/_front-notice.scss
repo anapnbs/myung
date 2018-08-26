@@ -1,0 +1,13 @@
+#notice-box {
+    border-top: 1px solid #ddd;
+    // background-color: $primaryBgColor;
+    // color: $white;
+
+    .card.card-body {
+        min-height: 600px;
+
+        .row {
+            min-height: 170px;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+/* Footer Styles */
+footer#footer {
+    background-color: $darkBgColor;
+    color: set-text-color($darkBgColor);
+    position: relative;
+    z-index: 10;
+
+    a, a:hover {
+        color: #fff;
+    }
+}
