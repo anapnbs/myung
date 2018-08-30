@@ -4893,16 +4893,17 @@ https://github.com/mdbootstrap/bootstrap-material-design/blob/master/scss/core/_
   flex-direction: column;
   align-items: stretch; }
 
-.main-img img,
-.imgs img {
+.main-img img {
   width: 100%; }
 
 .imgs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5px; }
+  grid-gap: 5px;
+  border-top: 5px solid #fff; }
+  .imgs img {
+    width: 100%; }
 
-/* Fade in animation */
 @keyframes fadeIn {
   to {
     opacity: 1; } }
@@ -4910,6 +4911,9 @@ https://github.com/mdbootstrap/bootstrap-material-design/blob/master/scss/core/_
 .fade-in {
   opacity: 0;
   animation: fadeIn 0.5s ease-in 1 forwards; }
+
+#map i.circle-outshape {
+  shape-outside: circle(50%); }
 
 .md-form {
   margin-top: .2rem;
