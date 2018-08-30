@@ -57,9 +57,9 @@ const IntroHtml = {
     'files': fileOptions
 };
 
-const Index2Html = {
-    filename: 'index2.html',
-    template: `${PATHS.src}/index2.html`,
+const PageHtml = {
+    filename: 'page.html',
+    template: `${PATHS.src}/page.html`,
     'files': fileOptions
 };
 
@@ -69,8 +69,8 @@ const pluginList = [
     new CopyWebpackPlugin(CopyImage),
     // new CopyWebpackPlugin(CopyFont),
     new HtmlWebpackPlugin(IndexHtml),
-    new HtmlWebpackPlugin(Index2Html),
-    new HtmlWebpackPlugin(IntroHtml)
+    new HtmlWebpackPlugin(IntroHtml),
+    new HtmlWebpackPlugin(PageHtml)
 ];
 
 // Modules

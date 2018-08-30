@@ -11,7 +11,651 @@
 </head>
 
 <body>
+    <!-- Scroll to Top button -->
+    <a id="scrolltoTop">Top</a>
 
+    <!-- SECTION : Quick Menu
+        ============================================ -->
+    <div id="quick-menu" class="d-none d-xl-block">
+        <ul class="list-unstyled">
+            <li class="border p-2">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Facebook">
+                    <img class="img-raised rounded" src="assets/images/facebook.jpg" alt="facebook" width="60px">
+                </a>
+            </li>
+            <li class="border p-2" width="62px" height="62px">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Blog">
+                    <img class="img-raised rounded" src="assets/images/blog.png" alt="blog" width="60px">
+                </a>
+            </li>
+            <li class="border p-2" width="62px" height="62px">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Kakao Friend">
+                    <img class="img-raised rounded" src="assets/images/kakaofriend.jpg" alt="kakaofriend" width="60px">
+                </a>
+            </li>
+            <li class="border p-2" width="62px" height="62px">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Naver Talk">
+                    <img class="img-raised rounded" src="assets/images/navertalk.png" alt="naver talk" width="60px">
+                </a>
+            </li>
+            <li class="border p-2" width="62px" height="62px">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Quick Menu 1">
+                    <img class="img-raised rounded" src="http://via.placeholder.com/60x60?text=QM1" alt="quick menu 1" width="60px">
+                </a>
+            </li>
+            <li class="border p-2" width="62px" height="62px">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Quick Menu 2">
+                    <img class="img-raised rounded" src="http://via.placeholder.com/60x60?text=QM2" alt="quick menu 2" width="60px">
+                </a>
+            </li>
+            <li class="border p-2" width="62px" height="62px">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Quick Menu 3">
+                    <img class="img-raised rounded" src="http://via.placeholder.com/60x60?text=QM3" alt="quick menu 3" width="60px">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /SECTION : Quick Menu -->
+
+    <!-- SECTION : Online Modal
+        ============================================ -->
+    <div class="modal fade" id="onlineModal" tabindex="-1" role="dialog" aria-labelledby="onlineModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="onlineModalLabel">Ask us whenever...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <p class="h4 text-center mb-4">Wite to us</p>
+
+                        <div class="form-row">
+                            <div class="col-lg-6">
+                                <div class="md-form">
+                                    <input type="text" id="materialFormContactNameEx" class="form-control" placeholder="Your name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="md-form">
+                                    <input type="email" id="materialFormContactEmailEx" class="form-control" placeholder="Your email">
+                                    <!-- <label for="materialFormContactEmailEx">Your email</label> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="md-form">
+                                    <input type="text" id="materialFormContactSubjectEx" class="form-control" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="md-form">
+                                    <textarea type="text" id="materialFormContactMessageEx" class="form-control md-textarea" rows="3" placeholder="Your message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button class="btn btn-outline-secondary" type="submit">Send
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Additional Contact -->
+                    <div class="text-center my-4">
+                        <h4>OR</h4>
+                        <p>If you feel comfortable calling a phone, please telephone 055-111-1111~ </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /SECTION : Online Modal -->
+
+    <!-- SECTION : Search Modal
+        ============================================ -->
+    <div class="modal fade" id="modal-search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- modal-dialog modal-xl -->
+        <div class="modal-dialog modal-xl my-0" role="document">
+            <!-- modal-content -->
+            <div class="modal-content">
+                <div class="container">
+                    <!-- modal-header -->
+                    <div class="modal-header border-0 d-flex align-items-center md-form">
+                        <input type="text" class="form-control search-term my-0" id="search-term" placeholder="Search for disease & treatment..."
+                            autofocus="true">
+                        <button type="button" id="start-record-btn" class="btn btn-info mr-2" data-toggle="tooltip" data-placement="left" title="Speech Record only on the google chrome browser">
+                            <i class="fas fa-microphone fa-2x"></i>
+                        </button>
+                        <button type="button" id="pause-record-btn" class="js-search-close btn btn-danger" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-times fa-2x"></i>
+                        </button>
+                    </div>
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <!-- search-results -->
+                        <div id="search-results">
+                            <div class="row">
+                                <div class="col-md-4" id="search-post"></div>
+                                <div class="col-md-4" id="search-page"></div>
+                                <div class="col-md-4" id="search-post_type">
+                                    <div class="mb-4" id="search-event"></div>
+                                    <div id="search-review"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /SECTION : Search -->
+
+    <!-- SECTION : ALERT
+        ============================================ -->
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        This website is produced in the latest html and may not be properly reflected in internet explorer.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <!-- /SECTION : ALERT -->
+
+    <!-- SECTION : NAV
+        ============================================ -->
+    <nav id="top-nav" class="navbar navbar-expand-lg navbar-light navbar-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/images/logo.png" width="256" height="50" class="d-inline-block align-top" alt="">
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarTopContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-2 active">
+                        <a class="nav-link" href="intro.html">Intro
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Online</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-search">Search</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav id="primary-nav" class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPrimaryContent" aria-controls="navbarPrimaryContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarPrimaryContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mr-xl-5 mr-4 d-block d-lg-none">
+                        <a class="nav-link" href="intro.html">Intro</a>
+                    </li>
+                    <li class="nav-item mr-xl-5 mr-4 active">
+                        <a class="nav-link" href="page.html">Menu1
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mr-xl-5 mr-4 dropdown dropdown-wide d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu2</a>
+                        <div class="dropdown-menu w-100 brown lighten-5 shadow" aria-labelledby="navbarDropdown">
+                            <div class="container-fluid py-4" style="padding-left: 6rem; padding-right: 6rem;">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h5>
+                                            <strong>Lorem, ipsum dolor.</strong>
+                                        </h5>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores a error minima. Quibusdam provident, quod
+                                            voluptates numquam recusandae nemo atque laborum est quam accusantium? Corporis
+                                            perspiciatis architecto soluta veniam.
+                                        </p>
+                                        <img src="http://via.placeholder.com/600x400" alt="" class="img-fluid rounded mt-3">
+                                    </div>
+                                    <div class="col-9">
+                                        <h5>
+                                            <strong>The Clinics of Myung OMC</strong>
+                                        </h5>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-lg-4 px-0">
+                                                <a class="dropdown-item px-2" href="page.html">
+                                                    <img src="http://via.placeholder.com/600x300" alt="" class="img-fluid shadow-lg rounded mb-3">
+                                                    <h5>Project 1</h5>
+                                                    <p>Lorem ipsum dolor sit amet..</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-4 px-0">
+                                                <a class="dropdown-item px-2" href="page.html">
+                                                    <img src="http://via.placeholder.com/600x300" alt="" class="img-fluid shadow-lg rounded mb-3">
+                                                    <h5>Project 2</h5>
+                                                    <p>Lorem ipsum dolor sit amet..</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-4 px-0">
+                                                <a class="dropdown-item px-2" href="page.html">
+                                                    <img src="http://via.placeholder.com/600x300" alt="" class="img-fluid shadow-lg rounded mb-3">
+                                                    <h5>Project 3</h5>
+                                                    <p>Lorem ipsum dolor sit amet..</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-4 px-0">
+                                                <a class="dropdown-item px-2" href="page.html">
+                                                    <img src="http://via.placeholder.com/600x300" alt="" class="img-fluid shadow-lg rounded mb-3">
+                                                    <h5>Project 4</h5>
+                                                    <p>Lorem ipsum dolor sit amet..</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-4 px-0">
+                                                <a class="dropdown-item px-2" href="page.html">
+                                                    <img src="http://via.placeholder.com/600x300" alt="" class="img-fluid shadow-lg rounded mb-3">
+                                                    <h5>Project 5</h5>
+                                                    <p>Lorem ipsum dolor sit amet.</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-4 px-0">
+                                                <a class="dropdown-item px-2" href="page.html">
+                                                    <img src="http://via.placeholder.com/600x300" alt="" class="img-fluid shadow-lg rounded mb-3">
+                                                    <h5>Project 5</h5>
+                                                    <p>Lorem ipsum dolor sit amet.</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Project Menu for PC -->
+                    <li class="nav-item dropdown d-block d-lg-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Menu2
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="page.html">page1</a>
+                            <a class="dropdown-item" href="page.html">page2</a>
+                            <a class="dropdown-item" href="page.html">page3</a>
+                            <a class="dropdown-item" href="page.html">page4</a>
+                            <a class="dropdown-item" href="page.html">page5</a>
+                        </div>
+                    </li>
+                    <!-- Project Menu for Mobile -->
+                    <li class="nav-item mr-xl-5 mr-4">
+                        <a class="nav-link" href="page.html">Menu3</a>
+                    </li>
+                    <li class="nav-item mr-xl-5 mr-4">
+                        <a class="nav-link" href="page.html">Menu4</a>
+                    </li>
+                    <li class="nav-item mr-xl-5 mr-4">
+                        <a class="nav-link" href="page.html">Menu5</a>
+                    </li>
+                    <li class="nav-item mr-xl-5 mr-4">
+                        <a class="nav-link" href="page.html">Menu6</a>
+                    </li>
+                    <li class="nav-item mr-xl-5 mr-4">
+                        <a class="nav-link" href="page.html">Menu7</a>
+                    </li>
+                    <li class="nav-item mr-xl-5 mr-4">
+                        <a class="nav-link" href="page.html">Menu8</a>
+                    </li>
+                    <li class="nav-item mr-xl-5 mr-4 d-block d-lg-none">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Online</a>
+                    </li>
+                    <li class="nav-item mr-xl-5 mr-4 d-block d-lg-none">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-search">Search</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- /SECTION -->
+
+    <!-- SECTION : Top Banner
+        ============================================ -->
+    <!-- <div id="jumbotron" class="topBanner wow fadeInDown" style="background-image: url('assets/images/bg_universe.jpg');">
+        <div class="container mb-5 py-5">
+            <h1 class="display-3 text-center text-white font-weight-bold">CLinic Page Title</h1>
+            <br>
+            <h5 class="desc text-white text-center my-4">Page Description if exists. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, quas?</h5>
+        </div>
+    </div> -->
+    <!-- /SECTION : Top Banner -->
+
+    <!-- Intro Page Content
+        ============================================ -->
+    <div class="wrapper">
+
+        <!-- SECTION : Page Main -->
+        <section id="page-main" class="mb-5">
+            <div class="section-content">
+                <div class="container">
+                    <div class="row py-5">
+                        <!-- Main Section -->
+                        <article class="col-lg-8 mb-5 order-lg-last">
+
+                            <h3>Hello, I'm Dr.Oh.
+                                <br>
+                                <small>Nice to meet you!</small>
+                            </h3>
+                            <br>
+                            <img src="assets/images/profile-img_1.jpeg" alt="" class="profile-img img-fluid rounded-circle shadow-lg float-lg-left mr-lg-4 d-block mx-auto"
+                                width="60%">
+                            <br>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque aliquam facere temporibus commodi,
+                                consequuntur quidem voluptatem omnis! Officia dolore quas ducimus optio, obcaecati cumque
+                                facilis consectetur similique eius, aut possimus!</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, dolorum? Ut velit cum optio
+                                minima commodi pariatur iste incidunt dolores facilis adipisci fugiat mollitia, voluptatum
+                                sit nihil quidem? Unde accusantium, hic itaque illo enim modi eos expedita eveniet. Placeat
+                                amet ipsum nemo architecto. Maiores sequi laudantium fuga at! Velit, quas.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam unde beatae vero exercitationem
+                                commodi nulla magnam quod, quis earum incidunt? Quidem cumque fugit, quo voluptate animi
+                                ipsam, explicabo sunt tempore ipsum soluta dignissimos quam eveniet in quod quia necessitatibus
+                                expedita. Aspernatur delectus fugiat, enim cupiditate beatae dolorem aut tenetur vitae!</p>
+                            <br>
+                            <hr>
+                            <br>
+                            <img src="assets/images/profile-img_2.jpg" alt="" class="profile-img img-fluid rounded-circle shadow-lg float-lg-right ml-lg-4 d-block mx-auto"
+                                width="40%">
+                            <h4>My Careers</h4>
+                            <ul>
+                                <li>Born in Seoul</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                                <li>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam,
+                                    doloribus?
+                                </li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet. Lorem, ipsum dolor.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                            </ul>
+                            <br>
+
+                            <!-- Time Table -->
+                            <div class="time-table table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">Mon</th>
+                                            <th scope="col">Tue</th>
+                                            <th scope="col">Wed</th>
+                                            <th scope="col">Thu</th>
+                                            <th scope="col">Fri</th>
+                                            <th scope="col">Sat</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">OPEN</th>
+                                            <td>AM 8:30</td>
+                                            <td>AM 8:30</td>
+                                            <td>AM 8:30</td>
+                                            <td>AM 8:30</td>
+                                            <td>AM 8:30</td>
+                                            <td>AM 8:30</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">CLOSE</th>
+                                            <td>PM 6:00</td>
+                                            <td>PM 8:00</td>
+                                            <td>PM 6:00</td>
+                                            <td>PM 8:00</td>
+                                            <td>PM 6:00</td>
+                                            <td>PM 3:00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <br>
+
+                            <!-- Info Boxes -->
+                            <div class="info">
+                                <h3>Counseling Infos</h3>
+                                <br>
+                                <div class="container">
+                                    <div class="row text-center">
+                                        <div id="shadow-box" class="info-item col-md-6 p-5 border">
+                                            <i class="fas fa-phone-square fa-5x"></i>
+                                            <br>
+                                            <p class="lead">055-111-1111</p>
+                                        </div>
+                                        <div id="shadow-box" class="info-item col-md-6 p-5 border">
+                                            <i class="fas fa-fax fa-5x"></i>
+                                            <br>
+                                            <p class="lead">055-111-1112</p>
+                                        </div>
+                                        <div id="shadow-box" class="info-item col-md-6 p-5 border">
+                                            <i class="fas fa-chalkboard-teacher fa-5x"></i>
+                                            <br>
+                                            <a href="#" class="btn btn-danger">Online</a>
+                                        </div>
+                                        <div id="shadow-box" class=" info-item col-md-6 p-5 border ">
+                                            <i class="fas fa-comments fa-5x "></i>
+                                            <br>
+                                            <p class="lead ">Katalk</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+                            <hr>
+                            <br>
+
+                            <!-- Gallery Images -->
+                            <div class="container">
+                                <h3>Landscape</h3>
+                                <br>
+                                <div class="main-img">
+                                    <img src="https://preview.ibb.co/gxVppG/img1.jpg" id="current">
+                                </div>
+
+                                <div class="imgs">
+                                    <img src="https://preview.ibb.co/gxVppG/img1.jpg">
+                                    <img src="https://preview.ibb.co/iZ3Lww/img2.jpg">
+                                    <img src="https://preview.ibb.co/iQsPOb/img3.jpg">
+                                    <img src="https://preview.ibb.co/gFFdib/img4.jpg">
+                                    <img src="https://preview.ibb.co/hS5ppG/img5.jpg">
+                                    <img src="https://preview.ibb.co/goKtGw/img6.jpg">
+                                    <img src="https://preview.ibb.co/bSWjOb/img7.jpg">
+                                    <img src="https://preview.ibb.co/i2o9pG/img8.jpg">
+                                </div>
+                            </div>
+
+                            <br>
+                            <br>
+
+                            <!-- How to Find -->
+                            <div id="map" class="container">
+                                <h3>How to visit us</h3>
+                                <br>
+                                <div class="row">
+                                    <iframe class="my-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.72580230479!2d128.08635259188677!3d35.19378257773823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356efc4174379d3b%3A0xb2b377aa9a2d99d4!2z66qF7ZWc7J2Y7JuQ!5e0!3m2!1sko!2skr!4v1535253762726"
+                                        width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div>
+                                        <i class="circle-outshape fas fa-map-marked-alt fa-8x float-left mr-4 mb-4 text-danger"></i>
+                                        <p>
+                                            <b>New Address:</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum,
+                                            nobis quas?</p>
+                                        <p>
+                                            <b>Old Address:</b> Reprehenderit quasi recusandae reiciendis placeat ea eaque eum
+                                            asperiores
+                                        </p>
+                                        <p>
+                                            <b>Landmark:</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
+                                            officia officiis in saepe natus rerum minus facere, laboriosam repellat enim
+                                            nostrum esse reiciendis voluptates, doloremque maiores exercitationem dolorum
+                                            tempore quis.</p>
+                                        <br>
+                                        <i class="fas fa-parking fa-8x float-left mr-4 mb-4 text-info"></i>
+                                        <p>
+                                            <b>Parking:</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
+                                            officia officiis in saepe natus rerum minus facere, laboriosam repellat enim
+                                            nostrum esse reiciendis voluptates, doloremque maiores exercitationem dolorum
+                                            tempore quis.</p>
+                                        <br>
+                                        <br>
+                                        <i class="fas fa-subway fa-8x float-left mr-4 mb-4 text-success"></i>
+                                        <p>
+                                            <b>Subway:</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
+                                            officia officiis in saepe natus rerum minus facere, laboriosam repellat enim
+                                            nostrum esse reiciendis voluptates, doloremque maiores exercitationem dolorum
+                                            tempore quis.</p>
+                                        <br>
+                                        <br>
+                                        <i class="fas fa-bus-alt fa-8x float-left mr-4 mb-4 text-dark"></i>
+                                        <p>
+                                            <b>Bus:</b> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam officia
+                                            officiis in saepe natus rerum minus facere, laboriosam repellat enim nostrum
+                                            esse reiciendis voluptates, doloremque maiores exercitationem dolorum tempore
+                                            quis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+                            <hr>
+                            <br>
+
+                            <!-- Notice Section -->
+                            <div id="notice table-responsive">
+                                <h3>Notices</h3>
+                                <br>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col" width="60%">Title</th>
+                                            <th scope="col">Author</th>
+                                            <th scope="col">Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, repudiandae.
+                                            </td>
+                                            <td>Otto</td>
+                                            <td>2018-8-29</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing.</td>
+                                            <td>Thornton</td>
+                                            <td>2018-8-17</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quo veritatis
+                                                laborum!
+                                            </td>
+                                            <td>John</td>
+                                            <td>2018-8-21</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </article>
+                        <!-- Main Section -->
+
+                        <div class="col-lg-4">
+
+                            <aside class="infoTab text-white p-4">
+
+                                <h4>
+                                    <i class="fas fa-map-marked-alt fa-lg mr-4"></i> Find US</h4>
+                                <p class="ml-5 mt-3 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sequi praesentium facilis
+                                    dolore eveniet, asperiores fugit quisquam consequuntur rem excepturi?</p>
+
+                                <h4>
+                                    <i class="fas fa-phone-square fa-lg mr-4"></i> Give US a call</h4>
+                                <p class="ml-5 mt-3 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sequi praesentium facilis
+                                    dolore eveniet, asperiores fugit quisquam consequuntur rem excepturi? consectetur adipisicing
+                                    elit. Cumque sequi praesentium facilis dolore eveniet, asperiores fugit quisquam consequuntur
+                                    rem.
+                                </p>
+
+                                <h4>
+                                    <i class="fas fa-file-alt fa-lg mr-4"></i> Legal Information</h4>
+                                <p class="ml-5 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sequi praesentium facilis
+                                    dolore eveniet, asperiores fugit quisquam consequuntur rem excepturi?</p>
+
+                            </aside>
+
+                        </div>
+                        <!-- Second Col -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- Intro Page Content -->
+
+    <!-- SECTION : Footer
+        ============================================ -->
+    <footer id="footer">
+        <div class="section-content ">
+            <div class="container ">
+                <!-- Footer Navs -->
+                <ul class="nav justify-content-center ">
+                    <li class="nav-item ">
+                        <a class="nav-link active " href="# ">Menu1</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="# ">Menu2</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="# ">Menu3</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="# ">Menu4</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="# ">Menu5</a>
+                    </li>
+                </ul>
+                <hr class="bg-white ">
+                <br>
+                <div class="row ">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis necessitatibus sint, excepturi quo cumque repudiandae,
+                    eum, accusantium deleniti aut illum. Perspiciatis soluta enim excepturi repellat reiciendis quis cupiditate
+                    quia.
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /section-content -->
+    </footer>
+    <!-- /SECTION : Footer -->
 </body>
 
 </html>

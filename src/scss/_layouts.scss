@@ -1,0 +1,112 @@
+// Global Styles
+.section-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+#sub-main {
+    background-image: linear-gradient(#fff, $secondaryBgColor);
+}
+
+// Modify Bootstrap Classes
+.shadow-xl {
+    box-shadow: 0 1rem 2.5rem -0.8rem rgba(0, 0, 0, 0.56), 0 0.25rem 1.5rem rgba(0, 0, 0, 0.12), 0 0.5rem 0.75rem -0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.modal-xl {
+    max-width: 99% !important;
+}
+
+#jumbotron {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 6rem;
+	padding-bottom: 6rem;
+
+    .container {
+		max-width: 40rem;
+		// padding: 2rem;
+		background: rgba(255,255,255,0.3);
+	}
+}
+
+@include mediaSm {
+    #jumbotron .container {
+        max-width: 90%;
+    }
+}
+
+// Layout customization
+.main {
+	//border-radius: $border-radius-base * 2;
+    z-index: 3;
+    background: #fff;
+    @include shadow-16dp();
+}
+.main-raised-square {
+    margin: -60px 30px 0px;
+    @include shadow-16dp();
+}
+
+.main-raised-rounded{
+    border-radius: $border-radius-base * 2;
+    @extend .main-raised-square;
+}
+
+// Page Styles
+.infoTab {
+	background-color: rgba(0,0,0,.4);
+	@include easeOut;
+	&:hover {
+		background-color: rgba(0,0,0,.85);
+        // box-shadow: 0 0 8px rgba(0,0,0,.2), 0 8px 16px rgba(0,0,0,.4);
+        @include shadow-6dp();
+	}
+}
+
+// Intro Page Styles
+.profile-img {
+    shape-outside: circle(50%);
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    min-height: 232px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+// Gallery
+.main-img img {
+    width: 100%;
+}
+
+.imgs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    border-top: 5px solid #fff;
+
+    img {
+        width: 100%;
+    }
+}
+
+// Fade in animation
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+// Map Section
+#map i.circle-outshape {
+    shape-outside: circle(50%);
+}
