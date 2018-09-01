@@ -63,6 +63,12 @@ const PageHtml = {
     'files': fileOptions
 };
 
+const CounselHtml = {
+    filename: 'counsel.html',
+    template: `${PATHS.src}/counsel.html`,
+    'files': fileOptions
+};
+
 const pluginList = [
     new ExtractTextPlugin('assets/css/app.bundle.css'),
     // extractCSS,
@@ -70,6 +76,7 @@ const pluginList = [
     // new CopyWebpackPlugin(CopyFont),
     new HtmlWebpackPlugin(IndexHtml),
     new HtmlWebpackPlugin(IntroHtml),
+    new HtmlWebpackPlugin(CounselHtml),
     new HtmlWebpackPlugin(PageHtml)
 ];
 
