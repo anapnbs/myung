@@ -1230,6 +1230,9 @@ h3, h2 {
 h1 {
   line-height: 3rem; }
 
+a {
+  outline: 0; }
+
 .section-content {
   padding-top: 4rem;
   padding-bottom: 4rem; }
@@ -1272,9 +1275,15 @@ h1 {
 .infoTab {
   background-color: rgba(0, 0, 0, 0.4);
   transition: all .5s ease-out; }
+  .infoTab .list-group-item {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.125); }
   .infoTab:hover {
     background-color: rgba(0, 0, 0, 0.85);
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2); }
+    .infoTab:hover .list-group-item {
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.85); }
 
 .profile-img {
   shape-outside: circle(50%);
@@ -1338,7 +1347,6 @@ h1 {
     border-bottom: 1px solid #4285F4;
     box-shadow: 0 1px 0 0 #4285F4; }
 
-/* Scroll to Top Button */
 #scrolltoTop {
   display: none;
   position: fixed;
@@ -1357,18 +1365,16 @@ h1 {
   #scrolltoTop:hover {
     background-color: rgba(255, 0, 0, 0.65); }
 
-/* Quick Menu */
 #quick-menu {
   position: fixed;
   right: 20px;
   top: 80px;
   width: 80px;
   height: 80px;
-  z-index: 10000; }
+  z-index: 1021; }
   #quick-menu ul {
     background-color: rgba(66, 66, 66, 0.4); }
 
-/* Primary Navigation Styles */
 nav#primary-nav .dropdown-wide {
   position: static; }
   nav#primary-nav .dropdown-wide .dropdown-menu.w-100 {
@@ -1380,7 +1386,6 @@ nav#primary-nav a {
 nav#primary-nav .dropdown-menu.show a {
   font-size: .95rem; }
 
-/* Slide Navigation Styles */
 header .menu-btn {
   position: absolute;
   z-index: 101;
@@ -1514,6 +1519,10 @@ div#carouselFront .carousel-item {
     margin: auto;
     width: 100%;
     height: 100%; }
+    div#carouselFront .carousel-item .carousel-overlay .carousel-text {
+      width: 60%;
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 2.5rem; }
 
 #clinic-box .box-items {
   display: grid;
@@ -1587,7 +1596,6 @@ div#carouselFront .carousel-item {
     #notice-box .card.card-body .row {
       min-height: 170px; }
 
-/* Footer Styles */
 footer#footer {
   background-color: #272d38;
   color: #fff;

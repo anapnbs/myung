@@ -57,20 +57,20 @@
     </div>
     <!-- /SECTION : Quick Menu -->
 
-    <!-- SECTION : Online Modal
-    ============================================ -->
+    <!-- SECTION : Reservation Modal
+        ============================================ -->
     <div class="modal fade" id="onlineModal" tabindex="-1" role="dialog" aria-labelledby="onlineModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="onlineModalLabel">Ask us whenever...</h5>
+                    <h5 class="modal-title" id="onlineModalLabel">Reservation</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <form>
-                        <p class="h4 text-center mb-4">Wite to us</p>
+                        <p class="h4 text-center mb-4">Pre-entry here...</p>
 
                         <div class="form-row">
                             <div class="col-lg-6">
@@ -81,7 +81,16 @@
                             <div class="col-lg-6">
                                 <div class="md-form">
                                     <input type="email" id="materialFormContactEmailEx" class="form-control" placeholder="Your email">
-                                    <!-- <label for="materialFormContactEmailEx">Your email</label> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="md-form">
+                                    <input type="tel" id="materialFormContactTelEx" class="form-control" placeholder="Your phone">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="md-form">
+                                    <input type="text" id="materialFormContactDateEx" class="form-control" placeholder="Select Date">
                                 </div>
                             </div>
                             <div class="col-lg-12">
@@ -91,13 +100,13 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="md-form">
-                                    <textarea type="text" id="materialFormContactMessageEx" class="form-control md-textarea" rows="3" placeholder="Your message"></textarea>
+                                    <textarea type="text" id="materialFormContactMessageEx" class="form-control md-textarea" rows="2" placeholder="Your message"></textarea>
                                 </div>
                             </div>
                         </div>
 
                         <div class="text-center mt-4">
-                            <button class="btn btn-outline-secondary" type="submit">Send
+                            <button class="btn btn-outline-danger" type="submit">Send
                                 <i class="fas fa-paper-plane"></i>
                             </button>
                         </div>
@@ -109,13 +118,10 @@
                         <p>If you feel comfortable calling a phone, please telephone 055-111-1111~ </p>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
             </div>
         </div>
     </div>
-    <!-- /SECTION : Online Modal -->
+    <!-- /SECTION : Reservation Modal -->
 
     <!-- SECTION : Search Modal
     ============================================ -->
@@ -168,7 +174,7 @@
 
     <!-- SECTION : NAV
     ============================================ -->
-    <nav id="top-nav" class="navbar navbar-expand-lg navbar-light navbar-transparent">
+    <nav id="top-nav" class="navbar navbar-expand-lg navbar-light navbar-transparent py-3">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="./assets/images/logo.png" width="256" height="50" class="d-inline-block align-top" alt="">
@@ -182,10 +188,16 @@
                         </a>
                     </li>
                     <li class="nav-item mr-2">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Online</a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Reservation</a>
                     </li>
                     <li class="nav-item mr-2">
                         <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-search">Search</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link btn btn-info text-white shadow" role="button" href="#">SignUp</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link btn btn-danger text-white shadow" role="button" href="#">Login</a>
                     </li>
                 </ul>
             </div>
@@ -312,11 +324,15 @@
                     <li class="nav-item mr-xl-5 mr-4">
                         <a class="nav-link" href="page.html">Menu8</a>
                     </li>
-                    <li class="nav-item mr-xl-5 mr-4 d-block d-lg-none">
+                    <li class="nav-item d-block d-lg-none">
                         <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Online</a>
                     </li>
-                    <li class="nav-item mr-xl-5 mr-4 d-block d-lg-none">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-search">Search</a>
+                    <li class="d-block d-lg-none">
+                        <a class="mr-2 btn btn-sm btn-info text-white" href="#">SignUp</a>
+                        <a class="mr-2 btn btn-sm btn-danger text-white" href="#">Login</a>
+                        <a class="text-white align-middle" href="#" data-toggle="modal" data-target="#modal-search">
+                            <i class="fas fa-search"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -326,7 +342,7 @@
 
     <!-- SECTION : Top Banner
     ============================================ -->
-    <div id="jumbotron" class="topBanner wow fadeInDown" style="background-image: url('assets/images/bg_universe.jpg');">
+    <div id="jumbotron" class="topBanner wow fadeIn" style="background-image: url('assets/images/bg_universe.jpg');">
         <div class="container mb-5 py-5">
             <h1 class="display-3 text-center text-white font-weight-bold">CLinic Page Title</h1>
             <br>
@@ -360,32 +376,19 @@
                         </article>
                         <!-- Main Section -->
 
+                        <!-- Aside Section -->
                         <div class="col-lg-4 wow fadeInRight">
 
-                            <aside class="infoTab text-white p-4">
-
-                                <h4>
-                                    <i class="fas fa-map-marked-alt fa-lg mr-4"></i> Find US</h4>
-                                <p class="ml-5 mt-3 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sequi praesentium facilis
-                                    dolore eveniet, asperiores fugit quisquam consequuntur rem excepturi?</p>
-
-                                <h4>
-                                    <i class="fas fa-phone-square fa-lg mr-4"></i> Give US a call</h4>
-                                <p class="ml-5 mt-3 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sequi praesentium facilis
-                                    dolore eveniet, asperiores fugit quisquam consequuntur rem excepturi? consectetur adipisicing
-                                    elit. Cumque sequi praesentium facilis dolore eveniet, asperiores fugit quisquam consequuntur
-                                    rem.
-                                </p>
-
-                                <h4>
-                                    <i class="fas fa-file-alt fa-lg mr-4"></i> Legal Information</h4>
-                                <p class="ml-5 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sequi praesentium facilis
-                                    dolore eveniet, asperiores fugit quisquam consequuntur rem excepturi?</p>
-
+                            <aside class="list-group list-group-flush infoTab">
+                                <li class="list-group-item text-warning font-weight-bold">Menu Title</li>
+                                <a href="#" class="list-group-item text-white">Submenu 1</a>
+                                <a href="#" class="list-group-item text-white">Submenu 2</a>
+                                <a href="#" class="list-group-item text-white">Submenu 3</a>
+                                <a href="#" class="list-group-item text-white">Submenu 4</a>
                             </aside>
 
                         </div>
-                        <!-- Second Col -->
+                        <!-- Aside Section -->
                     </div>
                 </div>
             </div>

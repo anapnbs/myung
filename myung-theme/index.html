@@ -57,20 +57,20 @@
     </div>
     <!-- /SECTION : Quick Menu -->
 
-    <!-- SECTION : Online Modal
+    <!-- SECTION : Reservation Modal
     ============================================ -->
     <div class="modal fade" id="onlineModal" tabindex="-1" role="dialog" aria-labelledby="onlineModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="onlineModalLabel">Ask us whenever...</h5>
+                    <h5 class="modal-title" id="onlineModalLabel">Reservation</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <form>
-                        <p class="h4 text-center mb-4">Wite to us</p>
+                        <p class="h4 text-center mb-4">Pre-entry here...</p>
 
                         <div class="form-row">
                             <div class="col-lg-6">
@@ -81,7 +81,16 @@
                             <div class="col-lg-6">
                                 <div class="md-form">
                                     <input type="email" id="materialFormContactEmailEx" class="form-control" placeholder="Your email">
-                                    <!-- <label for="materialFormContactEmailEx">Your email</label> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="md-form">
+                                    <input type="tel" id="materialFormContactTelEx" class="form-control" placeholder="Your phone">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="md-form">
+                                    <input type="text" id="materialFormContactDateEx" class="form-control" placeholder="Select Date">
                                 </div>
                             </div>
                             <div class="col-lg-12">
@@ -91,13 +100,13 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="md-form">
-                                    <textarea type="text" id="materialFormContactMessageEx" class="form-control md-textarea" rows="3" placeholder="Your message"></textarea>
+                                    <textarea type="text" id="materialFormContactMessageEx" class="form-control md-textarea" rows="2" placeholder="Your message"></textarea>
                                 </div>
                             </div>
                         </div>
 
                         <div class="text-center mt-4">
-                            <button class="btn btn-outline-secondary" type="submit">Send
+                            <button class="btn btn-outline-danger" type="submit">Send
                                 <i class="fas fa-paper-plane"></i>
                             </button>
                         </div>
@@ -109,13 +118,10 @@
                         <p>If you feel comfortable calling a phone, please telephone 055-111-1111~ </p>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
             </div>
         </div>
     </div>
-    <!-- /SECTION : Online Modal -->
+    <!-- /SECTION : Reservation Modal -->
 
     <!-- SECTION : Search Modal
     ============================================ -->
@@ -168,7 +174,7 @@
 
     <!-- SECTION : NAV
     ============================================ -->
-    <nav id="top-nav" class="navbar navbar-expand-lg navbar-light navbar-transparent">
+    <nav id="top-nav" class="navbar navbar-expand-lg navbar-light navbar-transparent py-3">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="./assets/images/logo.png" width="256" height="50" class="d-inline-block align-top" alt="">
@@ -182,10 +188,16 @@
                         </a>
                     </li>
                     <li class="nav-item mr-2">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Online</a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Reservation</a>
                     </li>
                     <li class="nav-item mr-2">
                         <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-search">Search</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link btn btn-info text-white shadow" role="button" href="#">SignUp</a>
+                    </li>
+                    <li class="nav-item mr-2">
+                        <a class="nav-link btn btn-danger text-white shadow" role="button" href="#">Login</a>
                     </li>
                 </ul>
             </div>
@@ -193,6 +205,9 @@
     </nav>
 
     <nav id="primary-nav" class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top shadow-lg">
+        <div class="navbar-brand d-none">
+            <img src="./assets/images/logo.png" width="128" height="25" class="d-inline-block align-top" alt="Logo">
+        </div>
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPrimaryContent" aria-controls="navbarPrimaryContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -312,11 +327,15 @@
                     <li class="nav-item mr-xl-5 mr-4">
                         <a class="nav-link" href="page.html">Menu8</a>
                     </li>
-                    <li class="nav-item mr-xl-5 mr-4 d-block d-lg-none">
+                    <li class="nav-item d-block d-lg-none">
                         <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Online</a>
                     </li>
-                    <li class="nav-item mr-xl-5 mr-4 d-block d-lg-none">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-search">Search</a>
+                    <li class="d-block d-lg-none">
+                        <a class="mr-2 btn btn-sm btn-info text-white" href="#">SignUp</a>
+                        <a class="mr-2 btn btn-sm btn-danger text-white" href="#">Login</a>
+                        <a class="text-white align-middle" href="#" data-toggle="modal" data-target="#modal-search">
+                            <i class="fas fa-search"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -507,8 +526,8 @@
                             </div>
                             <br>
 
-                            <div class=" mx-auto ">
-                                <a class="btn btn-danger " href="# " role="button ">See More QnA</a>
+                            <div class=" mx-auto">
+                                <a class="btn btn-danger" href="#" role="button">See More QnA</a>
                             </div>
                         </div>
                         <!-- /card card-body -->
@@ -565,29 +584,29 @@
     <!-- SECTION : Footer
     ============================================ -->
     <footer id="footer">
-        <div class="section-content ">
-            <div class="container ">
+        <div class="section-content">
+            <div class="container">
                 <!-- Footer Navs -->
-                <ul class="nav justify-content-center ">
-                    <li class="nav-item ">
-                        <a class="nav-link active " href="# ">Menu1</a>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Menu1</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link " href="# ">Menu2</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu2</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link " href="# ">Menu3</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu3</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link " href="# ">Menu4</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu4</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link " href="# ">Menu5</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu5</a>
                     </li>
                 </ul>
-                <hr class="bg-white ">
+                <hr class="bg-white">
                 <br>
-                <div class="row ">
+                <div class="row">
                     <div>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis necessitatibus sint, excepturi quo cumque repudiandae,
                         eum, accusantium deleniti aut illum. Perspiciatis soluta enim excepturi repellat reiciendis quis
