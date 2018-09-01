@@ -1,18 +1,18 @@
-/* Quick Menu */
+// Quick Menu
 #quick-menu {
     position: fixed;
     right: 20px;
     top: 80px;
     width: 80px;
     height: 80px;
-    z-index: 10000;
+    z-index: 1021;
 
     ul {
         background-color: rgba($grey-darken-3, .4);
     }
 }
 
-/* Primary Navigation Styles */
+// Primary Navigation Styles
 nav#primary-nav {
     // background-color: #6d6d6d;
 
@@ -34,7 +34,7 @@ nav#primary-nav {
 
 }
 
-/* Slide Navigation Styles */
+// Slide Navigation Styles
 header {
     // Menu Button
     .menu-btn {
