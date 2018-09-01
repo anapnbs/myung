@@ -6,11 +6,12 @@ import 'lightbox2/dist/css/lightbox.min.css';
 import 'jquery';
 import 'popper.js';
 import 'bootstrap';
-import 'lightbox2/dist/js/lightbox-plus-jquery.js';
+// import 'lightbox2/dist/js/lightbox-plus-jquery.js';
 
 import { tooltip, popover } from './modules/bsComponents.js';
 import { wow } from './modules/wowAnimate.js';
 import { shadowRaise, shadowDown } from './modules/shadow.js';
 import scroll from './modules/scroll.js';
-import speech from './modules/speech.js';
+import { recognition } from './modules/speech.js';
+// import speech from './modules/speech.js';
 import { imgClick } from './modules/gallery.js';

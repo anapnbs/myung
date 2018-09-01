@@ -23,4 +23,5 @@ function imgClick(e) {
     // Change the opacity to opacity var
     e.target.style.opacity = opacity;
 }
+
 export { imgClick };

@@ -1,3 +1,29 @@
+div#carouselFront {
+    .carousel-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        /*opacity: 0.5;*/
+
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            color: #fff;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+
+            .carousel-text {
+                background-color: rgba(255, 255, 255, .3);
+                padding: 2.5rem;
+            }
+        }
+    }
+}
+
 #clinic-box {
 
     .box-items {
@@ -88,4 +114,34 @@
         }
     }
 
+}
+
+#clinic-infos {
+    margin-bottom: -8rem;
+    padding-bottom: 8rem;
+    transform: skewY(-8deg);
+    background-color: $secondaryBgColor;
+    color: set-text-color($secondaryBgColor);
+
+    .section-content {
+        transform: skewY(8deg);
+
+        img {
+            height: 300px;
+        }
+    }
+}
+
+#notice-box {
+    border-top: 1px solid #ddd;
+    // background-color: $primaryBgColor;
+    // color: $white;
+
+    .card.card-body {
+        min-height: 600px;
+
+        .row {
+            min-height: 170px;
+        }
+    }
 }

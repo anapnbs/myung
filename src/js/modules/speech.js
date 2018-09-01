@@ -38,4 +38,5 @@ noteTextarea.on('input', function () {
     noteContent = $(this).val();
 })
 
-export default speech
+// export default speech
+export { recognition };
