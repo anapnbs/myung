@@ -111,3 +111,14 @@ $border-radius-extreme: 30px !default;
     0  8px 10px -5px rgba($color, $mdb-shadow-key-umbra-opacity);
 }
 
+// Gallery Imgs
+@mixin imgs($length) {
+    display: grid;
+    grid-template-columns: repeat($length, 1fr);
+    grid-gap: 5px;
+    border-top: 5px solid #fff;
+
+    img {
+        width: 100%;
+    }
+}

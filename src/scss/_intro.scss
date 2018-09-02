@@ -1,0 +1,9 @@
+.page-template-intro {
+    .main-img img {
+        width: 100%;
+    }
+
+    .imgs {
+        @include imgs(4);
+    }
+}

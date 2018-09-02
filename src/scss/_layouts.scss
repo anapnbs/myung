@@ -98,22 +98,6 @@ a {
     align-items: stretch;
 }
 
-// Gallery
-.main-img img {
-    width: 100%;
-}
-
-.imgs {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5px;
-    border-top: 5px solid #fff;
-
-    img {
-        width: 100%;
-    }
-}
-
 // Fade in animation
 @keyframes fadeIn {
     to {
@@ -129,4 +113,10 @@ a {
 // Map Section
 #map i.circle-outshape {
     shape-outside: circle(50%);
+}
+
+// Post Meta Styles
+.post-meta {
+    border-top: double 1px #ddd;
+    border-bottom: double 1px #ddd;
 }
