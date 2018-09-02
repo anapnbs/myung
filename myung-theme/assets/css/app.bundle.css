@@ -4917,17 +4917,6 @@ a {
   flex-direction: column;
   align-items: stretch; }
 
-.main-img img {
-  width: 100%; }
-
-.imgs {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5px;
-  border-top: 5px solid #fff; }
-  .imgs img {
-    width: 100%; }
-
 @keyframes fadeIn {
   to {
     opacity: 1; } }
@@ -4938,6 +4927,10 @@ a {
 
 #map i.circle-outshape {
   shape-outside: circle(50%); }
+
+.post-meta {
+  border-top: double 1px #ddd;
+  border-bottom: double 1px #ddd; }
 
 .md-form {
   margin-top: .2rem;
@@ -5217,6 +5210,28 @@ div#carouselFront .carousel-item {
     min-height: 600px; }
     #notice-box .card.card-body .row {
       min-height: 170px; }
+
+.page-template-intro .main-img img {
+  width: 100%; }
+
+.page-template-intro .imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  border-top: 5px solid #fff; }
+  .page-template-intro .imgs img {
+    width: 100%; }
+
+.post-template-default .main-img img {
+  width: 100%; }
+
+.post-template-default .imgs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+  border-top: 5px solid #fff; }
+  .post-template-default .imgs img {
+    width: 100%; }
 
 .board tbody td a {
   text-decoration: none; }
