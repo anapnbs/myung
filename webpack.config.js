@@ -69,6 +69,12 @@ const CounselHtml = {
     'files': fileOptions
 };
 
+const ReviewlHtml = {
+    filename: 'review.html',
+    template: `${PATHS.src}/review.html`,
+    'files': fileOptions
+};
+
 const pluginList = [
     new ExtractTextPlugin('assets/css/app.bundle.css'),
     // extractCSS,
@@ -77,6 +83,7 @@ const pluginList = [
     new HtmlWebpackPlugin(IndexHtml),
     new HtmlWebpackPlugin(IntroHtml),
     new HtmlWebpackPlugin(CounselHtml),
+    new HtmlWebpackPlugin(ReviewlHtml),
     new HtmlWebpackPlugin(PageHtml)
 ];
 
