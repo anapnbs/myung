@@ -6,7 +6,7 @@ import 'lightbox2/dist/css/lightbox.min.css';
 import 'jquery';
 import 'popper.js';
 import 'bootstrap';
-// import 'lightbox2/dist/js/lightbox-plus-jquery.js';
+import 'lightbox2/dist/js/lightbox.js';
 
 import { tooltip, popover } from './modules/bsComponents.js';
 import { wow } from './modules/wowAnimate.js';

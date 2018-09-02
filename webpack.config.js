@@ -7,7 +7,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const sourceFolder = 'src',
     buildFolder = 'myung-theme',
     PATHS = {
-        contentBase: __dirname + buildFolder,
         build: path.resolve(__dirname, buildFolder),
         src: path.resolve(__dirname, sourceFolder),
         node: path.resolve(__dirname, 'node_modules'),
@@ -16,12 +15,12 @@ const sourceFolder = 'src',
 
 // Development Server Options
 const devServerOptions = {
-    contentBase: PATHS.contentBase
+    contentBase: __dirname + '/myung-theme'
 };
 
 // Plugins
 const CopyImage = [
-    { from: `${PATHS.src}/images/`, to: `${PATHS.build}/assets/images/` }
+    { from: PATHS.src + '/images/', to: PATHS.build + '/assets/images/' }
 ];
 
 const CopyFont = [
@@ -75,6 +74,12 @@ const ReviewlHtml = {
     'files': fileOptions
 };
 
+const PostHtml = {
+    filename: 'post.html',
+    template: `${PATHS.src}/post.html`,
+    'files': fileOptions
+};
+
 const pluginList = [
     new ExtractTextPlugin('assets/css/app.bundle.css'),
     // extractCSS,
@@ -84,7 +89,8 @@ const pluginList = [
     new HtmlWebpackPlugin(IntroHtml),
     new HtmlWebpackPlugin(CounselHtml),
     new HtmlWebpackPlugin(ReviewlHtml),
-    new HtmlWebpackPlugin(PageHtml)
+    new HtmlWebpackPlugin(PageHtml),
+    new HtmlWebpackPlugin(PostHtml)
 ];
 
 // Modules
@@ -98,7 +104,7 @@ const styles = {
     test: /\.css$/,
     use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: ['css-loader', 'postcss-loader']
+        use: ['css-loader?url=false', 'postcss-loader']
     })
 };
 
@@ -106,7 +112,7 @@ const sass = {
     test: /\.scss$/,
     use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: ['css-loader', 'sass-loader']
+        use: ['css-loader?url=false', 'sass-loader']
     })
 };
 
