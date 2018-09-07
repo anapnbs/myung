@@ -15,12 +15,12 @@
     <a id="scrolltoTop">Top</a>
 
     <!-- SECTION : Quick Menu
-        ============================================ -->
+    ============================================ -->
     <div id="quick-menu" class="d-none d-xl-block">
         <ul class="list-unstyled">
             <li class="border p-2">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Facebook">
-                    <img class="img-raised rounded" src="assets/images/facebook.jpg" alt="facebook" width="60px">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Online Counsel">
+                    <img class="img-raised rounded" src="assets/images/online.png" alt="online Counseling" width="60px">
                 </a>
             </li>
             <li class="border p-2" width="62px" height="62px">
@@ -29,28 +29,8 @@
                 </a>
             </li>
             <li class="border p-2" width="62px" height="62px">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Kakao Friend">
-                    <img class="img-raised rounded" src="assets/images/kakaofriend.jpg" alt="kakaofriend" width="60px">
-                </a>
-            </li>
-            <li class="border p-2" width="62px" height="62px">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Naver Talk">
-                    <img class="img-raised rounded" src="assets/images/navertalk.png" alt="naver talk" width="60px">
-                </a>
-            </li>
-            <li class="border p-2" width="62px" height="62px">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Quick Menu 1">
-                    <img class="img-raised rounded" src="http://via.placeholder.com/60x60?text=QM1" alt="quick menu 1" width="60px">
-                </a>
-            </li>
-            <li class="border p-2" width="62px" height="62px">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Quick Menu 2">
-                    <img class="img-raised rounded" src="http://via.placeholder.com/60x60?text=QM2" alt="quick menu 2" width="60px">
-                </a>
-            </li>
-            <li class="border p-2" width="62px" height="62px">
-                <a href="#" data-toggle="tooltip" data-placement="left" title="Quick Menu 3">
-                    <img class="img-raised rounded" src="http://via.placeholder.com/60x60?text=QM3" alt="quick menu 3" width="60px">
+                <a href="#" data-toggle="tooltip" data-placement="left" title="Treatment Review">
+                    <img class="img-raised rounded" src="assets/images/review.png" alt="kakaofriend" width="60px">
                 </a>
             </li>
         </ul>
@@ -135,9 +115,9 @@
                     <div class="modal-header border-0 d-flex align-items-center md-form">
                         <input type="text" class="form-control search-term my-0" id="search-term" placeholder="Search for disease & treatment..."
                             autofocus="true">
-                        <button type="button" id="start-record-btn" class="btn btn-info mr-2" data-toggle="tooltip" data-placement="left" title="Speech Record only on the google chrome browser">
+                        <!-- <button type="button" id="start-record-btn" class="btn btn-info mr-2" data-toggle="tooltip" data-placement="left" title="Speech Record only on the google chrome browser">
                             <i class="fas fa-microphone fa-2x"></i>
-                        </button>
+                        </button> -->
                         <button type="button" id="pause-record-btn" class="js-search-close btn btn-danger" data-dismiss="modal" aria-label="Close">
                             <i class="fa fa-times fa-2x"></i>
                         </button>
@@ -216,136 +196,241 @@
             </a>
         </div>
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPrimaryContent" aria-controls="navbarPrimaryContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarPrimaryContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item mr-xl-5 mr-4 d-block d-lg-none">
-                        <a class="nav-link" href="intro.html">Intro</a>
-                    </li>
-                    <li class="nav-item mr-xl-5 mr-4 active">
-                        <a class="nav-link" href="page.html">Menu1
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-xl-5 mr-4 dropdown dropdown-wide d-none d-lg-block">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="falspage.html">Menu2</a>
-                        <div class="dropdown-menu w-100 brown lighten-5 shadow" aria-labelledby="navbarDropdown">
-                            <div class="container-fluid py-4" style="padding-left: 6rem; padding-right: 6rem;">
-                                <div class="row">
-                                    <div class="col-3">
-                                        <h5>
-                                            <strong>Lorem, ipsum dolor.</strong>
-                                        </h5>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem asperiores a error minima. Quibusdam provident, quod
-                                            voluptates numquam recusandae nemo atque laborum est quam accusantium? Corporis
-                                            perspiciatis architecto soluta veniam.
-                                        </p>
-                                        <img src="http://via.placeholder.com/600x400" alt="" class="img-fluid rounded mt-3">
-                                    </div>
-                                    <div class="col-9">
-                                        <h5>
-                                            <strong>The Clinics of Myung OMC</strong>
-                                        </h5>
-                                        <hr>
-                                        <div class="row">
-                                            <div class="col-lg-4 px-0">
-                                                <a class="dropdown-item px-2" href="page.html">
-                                                    <img src="http://via.placeholder.com/600x300" alt="" class="img-fluid shadow-lg rounded mb-3">
-                                                    <h5>Project 1</h5>
-                                                    <p>Lorem ipsum dolor sit amet..</p>
-                                                </a>
+            <!-- SECTION: PC Primary Nav
+            ====================================================== -->
+            <div class="d-none d-lg-block mx-auto">
+                <div class="collapse navbar-collapse" id="navbarPrimaryContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mr-xl-5 dropdown dropdown-wide">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stomach</a>
+                            <div class="dropdown-menu w-100 brown lighten-5 shadow" aria-labelledby="navbarDropdown">
+                                <div class="container-fluid py-4" style="padding-left: 6rem; padding-right: 6rem;">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="row ml-5">
+                                                <div class="col-4">
+                                                    <ul class="list-unstyled">
+                                                        <li>Stomach 1</li>
+                                                        <li>Stomach 2</li>
+                                                        <li>Stomach 3</li>
+                                                        <li>Stomach 4</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-4">
+                                                    <ul class="list-unstyled">
+                                                        <li>OBGY 1</li>
+                                                        <li>OBGY 2</li>
+                                                        <li>OBGY 3</li>
+                                                        <li>OBGY 4</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-4">
+                                                    <ul class="list-unstyled">
+                                                        <li>Neuro 1</li>
+                                                        <li>Neuro 2</li>
+                                                        <li>Neuro 3</li>
+                                                        <li>Neuro 4</li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <div class="col-lg-4 px-0">
-                                                <a class="dropdown-item px-2" href="page.html">
-                                                    <img src="http://via.placeholder.com/600x300" alt="" class="img-fluid shadow-lg rounded mb-3">
-                                                    <h5>Project 2</h5>
-                                                    <p>Lorem ipsum dolor sit amet..</p>
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 px-0">
-                                                <a class="dropdown-item px-2" href="page.html">
-                                                    <img src="http://via.placeholder.com/600x300" alt="" class="img-fluid shadow-lg rounded mb-3">
-                                                    <h5>Project 3</h5>
-                                                    <p>Lorem ipsum dolor sit amet..</p>
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 px-0">
-                                                <a class="dropdown-item px-2" href="page.html">
-                                                    <img src="http://via.placeholder.com/600x300" alt="" class="img-fluid shadow-lg rounded mb-3">
-                                                    <h5>Project 4</h5>
-                                                    <p>Lorem ipsum dolor sit amet..</p>
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 px-0">
-                                                <a class="dropdown-item px-2" href="page.html">
-                                                    <img src="http://via.placeholder.com/600x300" alt="" class="img-fluid shadow-lg rounded mb-3">
-                                                    <h5>Project 5</h5>
-                                                    <p>Lorem ipsum dolor sit amet.</p>
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 px-0">
-                                                <a class="dropdown-item px-2" href="page.html">
-                                                    <img src="http://via.placeholder.com/600x300" alt="" class="img-fluid shadow-lg rounded mb-3">
-                                                    <h5>Project 5</h5>
-                                                    <p>Lorem ipsum dolor sit amet.</p>
-                                                </a>
-                                            </div>
+                                        </div>
+                                        <div class="col-6 offset-1">
+                                            <p>GI Desc : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore ab tempore nihil vitae necessitatibus nam, aperiam magnam delectus laboriosam molestiae earum, non eligendi itaque ea pariatur nobis ratione dolorem ex quos, unde voluptatibus, suscipit corrupti doloribus. Optio pariatur exercitationem aperiam minima eum ea inventore, non nulla modi voluptatum? Similique accusamus quam, placeat soluta debitis ut iusto dicta quae eos iure voluptate quisquam hic architecto temporibus atque dolorem nemo natus illum repellendus praesentium quas. Soluta sequi nesciunt, inventore ducimus quod a. Dolor in officiis tempora unde perspiciatis corrupti voluptatibus reprehenderit facilis, veritatis quia repudiandae minima dolore maxime! Corporis, blanditiis, vitae!</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <!-- Project Menu for PC -->
-                    <li class="nav-item dropdown d-block d-lg-none">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            Menu2
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="page.html">page1</a>
-                            <a class="dropdown-item" href="page.html">page2</a>
-                            <a class="dropdown-item" href="page.html">page3</a>
-                            <a class="dropdown-item" href="page.html">page4</a>
-                            <a class="dropdown-item" href="page.html">page5</a>
-                        </div>
-                    </li>
-                    <!-- Project Menu for Mobile -->
-                    <li class="nav-item mr-xl-5 mr-4">
-                        <a class="nav-link" href="page.html">Menu3</a>
-                    </li>
-                    <li class="nav-item mr-xl-5 mr-4">
-                        <a class="nav-link" href="page.html">Menu4</a>
-                    </li>
-                    <li class="nav-item mr-xl-5 mr-4">
-                        <a class="nav-link" href="page.html">Menu5</a>
-                    </li>
-                    <li class="nav-item mr-xl-5 mr-4">
-                        <a class="nav-link" href="page.html">Menu6</a>
-                    </li>
-                    <li class="nav-item mr-xl-5 mr-4">
-                        <a class="nav-link" href="page.html">Menu7</a>
-                    </li>
-                    <li class="nav-item mr-xl-5 mr-4">
-                        <a class="nav-link" href="review.html">Review</a>
-                    </li>
-                    <li class="nav-item d-block d-lg-none">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Online</a>
-                    </li>
-                    <li class="d-block d-lg-none">
-                        <a class="mr-2 btn btn-sm btn-info text-white" href="#">SignUp</a>
-                        <a class="mr-2 btn btn-sm btn-danger text-white" href="#">Login</a>
-                        <a class="text-white align-middle" href="#" data-toggle="modal" data-target="#modal-search">
-                            <i class="fas fa-search"></i>
-                        </a>
-                    </li>
-                </ul>
+                        </li>
+                        <li class="nav-item mr-xl-5 dropdown dropdown-wide">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">OBGY</a>
+                            <div class="dropdown-menu w-100 brown lighten-5 shadow" aria-labelledby="navbarDropdown">
+                                <div class="container-fluid py-4" style="padding-left: 6rem; padding-right: 6rem;">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="row ml-5">
+                                                <div class="col-4">
+                                                    <ul class="list-unstyled">
+                                                        <li>Stomach 1</li>
+                                                        <li>Stomach 2</li>
+                                                        <li>Stomach 3</li>
+                                                        <li>Stomach 4</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-4">
+                                                    <ul class="list-unstyled">
+                                                        <li>OBGY 1</li>
+                                                        <li>OBGY 2</li>
+                                                        <li>OBGY 3</li>
+                                                        <li>OBGY 4</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-4">
+                                                    <ul class="list-unstyled">
+                                                        <li>Neuro 1</li>
+                                                        <li>Neuro 2</li>
+                                                        <li>Neuro 3</li>
+                                                        <li>Neuro 4</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 offset-1">
+                                            <p>OBGY Description : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore ab tempore nihil vitae necessitatibus nam, aperiam magnam delectus laboriosam molestiae earum, non eligendi itaque ea pariatur nobis ratione dolorem ex quos, unde voluptatibus, suscipit corrupti doloribus. Optio pariatur exercitationem aperiam minima eum ea inventore, non nulla modi voluptatum? Similique accusamus quam, placeat soluta debitis ut iusto dicta quae eos iure voluptate quisquam hic architecto temporibus atque dolorem nemo natus illum repellendus praesentium quas. Soluta sequi nesciunt, inventore ducimus quod a. Dolor in officiis tempora unde perspiciatis corrupti voluptatibus reprehenderit facilis, veritatis quia repudiandae minima dolore maxime! Corporis, blanditiis, vitae!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item mr-xl-5 dropdown dropdown-wide">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Neuro</a>
+                            <div class="dropdown-menu w-100 brown lighten-5 shadow" aria-labelledby="navbarDropdown">
+                                <div class="container-fluid py-4" style="padding-left: 6rem; padding-right: 6rem;">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="row ml-5">
+                                                <div class="col-4">
+                                                    <ul class="list-unstyled">
+                                                        <li>Stomach 1</li>
+                                                        <li>Stomach 2</li>
+                                                        <li>Stomach 3</li>
+                                                        <li>Stomach 4</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-4">
+                                                    <ul class="list-unstyled">
+                                                        <li>OBGY 1</li>
+                                                        <li>OBGY 2</li>
+                                                        <li>OBGY 3</li>
+                                                        <li>OBGY 4</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-4">
+                                                    <ul class="list-unstyled">
+                                                        <li>Neuro 1</li>
+                                                        <li>Neuro 2</li>
+                                                        <li>Neuro 3</li>
+                                                        <li>Neuro 4</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 offset-1">
+                                            <p>NP Description : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis dolore ab tempore nihil vitae necessitatibus nam, aperiam magnam delectus laboriosam molestiae earum, non eligendi itaque ea pariatur nobis ratione dolorem ex quos, unde voluptatibus, suscipit corrupti doloribus. Optio pariatur exercitationem aperiam minima eum ea inventore, non nulla modi voluptatum? Similique accusamus quam, placeat soluta debitis ut iusto dicta quae eos iure voluptate quisquam hic architecto temporibus atque dolorem nemo natus illum repellendus praesentium quas. Soluta sequi nesciunt, inventore ducimus quod a. Dolor in officiis tempora unde perspiciatis corrupti voluptatibus reprehenderit facilis, veritatis quia repudiandae minima dolore maxime! Corporis, blanditiis, vitae!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item mr-xl-5">
+                            <a class="nav-link" target="_blank" href="http://www.gounnury.com/">Derm</a>
+                        </li>
+                        <li class="nav-item mr-xl-5">
+                            <a class="nav-link" href="page.html">Sweats</a>
+                        </li>
+                        <li class="nav-item mr-xl-5">
+                            <a class="nav-link" href="page.html">Hair Loss</a>
+                        </li>
+                        <li class="nav-item mr-xl-5">
+                            <a class="nav-link" href="page.html">Tinitus</a>
+                        </li>
+                        <li class="nav-item mr-xl-5">
+                            <a class="nav-link" href="review.html">Review</a>
+                        </li>
+                        <li class="nav-item d-block d-lg-none">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Online</a>
+                        </li>
+                        <li class="d-block d-lg-none">
+                            <a class="mr-2 btn btn-sm btn-info text-white" href="#">SignUp</a>
+                            <a class="mr-2 btn btn-sm btn-danger text-white" href="#">Login</a>
+                            <a class="text-white align-middle" href="#" data-toggle="modal" data-target="#modal-search">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <!-- SECTION: PC Primary Nav -->
+
+            <!-- SECTION: Mobile Primary Nav
+            ====================================================== -->
+            <div class="d-block d-lg-none">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPrimaryMobile" aria-controls="navbarPrimaryMobile"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarPrimaryMobile">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item mr-xl-5 mr-4 d-block d-lg-none">
+                            <a class="nav-link" href="intro.html">Intro</a>
+                        </li>
+                        <li class="nav-itemmr-xl-5 mr-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              GI
+                            </a>
+                            <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="page.html">GI 1</a>
+                                <a class="dropdown-item" href="page.html">GI 2</a>
+                                <a class="dropdown-item" href="page.html">GI 3</a>
+                            </div>
+                        </li>
+                        <li class="nav-itemmr-xl-5 mr-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              OBGY
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="page.html">OBGY 1</a>
+                                <a class="dropdown-item" href="page.html">OBGY 2</a>
+                                <a class="dropdown-item" href="page.html">OBGY 3</a>
+                            </div>
+                        </li>
+                        <li class="nav-itemmr-xl-5 mr-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              NP
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="page.html">NP 1</a>
+                                <a class="dropdown-item" href="page.html">NP 2</a>
+                                <a class="dropdown-item" href="page.html">NP 3</a>
+                            </div>
+                        </li>
+                        <li class="nav-itemmr-xl-5 mr-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Derm
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="page.html">Derm 1</a>
+                                <a class="dropdown-item" href="page.html">Derm 2</a>
+                                <a class="dropdown-item" href="page.html">Derm 3</a>
+                            </div>
+                        </li>
+                        <li class="nav-item mr-xl-5 mr-4">
+                            <a class="nav-link" href="page.html">Sweats</a>
+                        </li>
+                        <li class="nav-item mr-xl-5 mr-4">
+                            <a class="nav-link" href="page.html">Hair Loss</a>
+                        </li>
+                        <li class="nav-item mr-xl-5 mr-4">
+                            <a class="nav-link" href="page.html">Tinitus</a>
+                        </li>
+                        <li class="nav-item mr-xl-5 mr-4">
+                            <a class="nav-link" href="review.html">Review</a>
+                        </li>
+                        <li class="nav-item d-block d-lg-none">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#onlineModal">Online</a>
+                        </li>
+                        <li class="d-block d-lg-none">
+                            <a class="mr-2 btn btn-sm btn-info text-white" href="#">SignUp</a>
+                            <a class="mr-2 btn btn-sm btn-danger text-white" href="#">Login</a>
+                            <a class="text-white align-middle" href="#" data-toggle="modal" data-target="#modal-search">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- SECTION: Mobile Primary Nav -->
         </div>
     </nav>
     <!-- /SECTION -->
@@ -413,26 +498,11 @@
 
                         <div class="col-lg-4">
 
-                            <aside class="infoTab text-white p-4">
-
-                                <h4>
-                                    <i class="fas fa-map-marked-alt fa-lg mr-4"></i> Find US</h4>
-                                <p class="ml-5 mt-3 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sequi praesentium facilis
-                                    dolore eveniet, asperiores fugit quisquam consequuntur rem excepturi?</p>
-
-                                <h4>
-                                    <i class="fas fa-phone-square fa-lg mr-4"></i> Give US a call</h4>
-                                <p class="ml-5 mt-3 mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sequi praesentium facilis
-                                    dolore eveniet, asperiores fugit quisquam consequuntur rem excepturi? consectetur adipisicing
-                                    elit. Cumque sequi praesentium facilis dolore eveniet, asperiores fugit quisquam consequuntur
-                                    rem.
-                                </p>
-
-                                <h4>
-                                    <i class="fas fa-file-alt fa-lg mr-4"></i> Legal Information</h4>
-                                <p class="ml-5 mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sequi praesentium facilis
-                                    dolore eveniet, asperiores fugit quisquam consequuntur rem excepturi?</p>
-
+                            <aside class="list-group list-group-flush infoTab">
+                                <li class="list-group-item text-warning font-weight-bold py-5"><h3>Title</h3></li>
+                                <a href="#" class="list-group-item text-white"><i class="fas fa-globe"></i> Online</a>
+                                <a href="#" class="list-group-item text-white"><i class="fas fa-info-circle"></i> Clinics</a>
+                                <a href="#" class="list-group-item text-white"><i class="fas fa-map-marked-alt"></i> Find Us</a>
                             </aside>
 
                         </div>

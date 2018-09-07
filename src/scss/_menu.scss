@@ -2,7 +2,7 @@
 #quick-menu {
     position: fixed;
     right: 20px;
-    top: 80px;
+    top: 160px;
     width: 80px;
     height: 80px;
     z-index: 1021;
@@ -25,11 +25,17 @@ nav#primary-nav {
     }
 
     a {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
-    .dropdown-menu.show a {
-        font-size: .95rem;
+    .dropdown-menu {
+        ul li, p {
+            font-size: .9rem;
+        }
+    }
+
+    li.dropdown:hover > .dropdown-menu {
+        display: block;
     }
 
 }

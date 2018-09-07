@@ -10,11 +10,11 @@ if (scrollTop) {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             // Top button show
             scrollTop.style.display = 'block';
-            brandOnScroll.classList.add('d-lg-block');
+            // brandOnScroll.classList.add('d-lg-block');
         } else {
             // Top button disappear
             scrollTop.style.display = 'none';
-            brandOnScroll.classList.remove('d-lg-block');
+            // brandOnScroll.classList.remove('d-lg-block');
         }
     }
 
