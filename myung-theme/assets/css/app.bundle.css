@@ -5001,6 +5001,9 @@ nav#primary-nav a {
 nav#primary-nav .dropdown-menu ul li, nav#primary-nav .dropdown-menu p {
   font-size: .9rem; }
 
+nav#primary-nav li.dropdown:hover > .dropdown-menu {
+  display: block; }
+
 header .menu-btn {
   position: absolute;
   z-index: 101;
